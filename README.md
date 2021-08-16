@@ -2,12 +2,12 @@
 
 > This is repository of Lv-619.JavaCore group.
 
-###List of branches
+### List of branches
 
 - main - tempate for new branches;
 - dev - examles from trainings;
 
-###Instruction. Create new branch
+### Instruction. Create new branch
 
 - create forlder on disk;
 - open cmd and goto to new forlder;
