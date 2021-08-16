@@ -12,9 +12,9 @@
 - create forlder on disk;
 - open cmd and goto to new forlder;
 - clone repository **git clone https://github.com/softservedata/lv619.git**
-- change directory to **lv619**;
+- change directory to lv619 **cd lv619**;
 - check branch **git branch**
-- create new branch **git branch <NAME>**
-- switch to new branch **git checkout <NAME>**
+- create new branch **git branch NAME**
+- switch to new branch **git checkout NAME**
 - open project in Idea/Eclipse;
 - write new code;
