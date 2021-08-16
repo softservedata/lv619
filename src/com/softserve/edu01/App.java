@@ -7,7 +7,7 @@ public class App {
         System.out.println("k = " + k);
         //
         for (int i = 0; i < args.length; i++) {
-            System.out.println("Arg " + i + " is " + args[i]);
+            System.out.println("Arg = " + i + " is " + args[i]);
         }
         System.out.println("Done");
     }
