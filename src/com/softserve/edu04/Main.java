@@ -1,0 +1,19 @@
+package com.softserve.edu04;
+
+public class Main {
+    
+    public static void main(String[] args) {
+        int width = 25, height = 10;
+        System.out.println("width = " + width + "\theight = " + height);
+        swap(width, height);
+        System.out.println("width = " + width + "\theight = " + height);
+    }
+
+    public static void swap(int w, int h) {
+        int temp = w;
+        w = h;
+        h = temp;
+        System.out.println("width = " + w + "\theight = " + h);
+    }
+    
+}
