@@ -1,7 +1,7 @@
 package com.sofserve.hw1;
 
 public class App3 {
-    public static void main (String args[]){
+    public static void main (String[] args){
         double country1 = Double.parseDouble(args[0]) * Double.parseDouble(args[3]);
         double country2 = Double.parseDouble(args[1]) * Double.parseDouble(args[4]);
         double country3 = Double.parseDouble(args[2]) * Double.parseDouble(args[5]);
