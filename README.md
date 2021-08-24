@@ -7,6 +7,7 @@
 - main - tempate for new branches;
 - dev - examles from trainings;
 - savk - new branch(Marko Savka);
+- PavloHural - new branch
 
 ### Instruction. Create new branch
 
