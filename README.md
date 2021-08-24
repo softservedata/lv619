@@ -4,15 +4,15 @@
 
 ### List of branches
 
-- main - tempate for new branches;
-- dev - examles from trainings;
+- main - template for new branches;
+- dev - examples from online lessons;
 - Savka - new branch(Marko Savka);
 - Rostyslav - new branch with homeworks
 
 ### Instruction. Create new branch
 
-- create forlder on disk;
-- open cmd and goto to new forlder;
+- create folder on disk;
+- open cmd(press WIN + R and type "cmd") and go to new folder;
 - clone repository **git clone https://github.com/softservedata/lv619.git**
 - change directory to lv619 **cd lv619**;
 - check branch **git branch**
