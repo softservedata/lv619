@@ -1,6 +1,7 @@
 package com.softserve.edu08s;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class AppSort {
     public static void main(String[] args) {
@@ -23,7 +24,15 @@ public class AppSort {
         students[4] = new Student("Orest", 1354);
         System.out.println("Origin Arrays = " + Arrays.toString(students));
         //
-        Arrays.sort(students, new Student.NameComparator());
+        //Arrays.sort(students, new Student.NameComparator());
+        //
+        Arrays.sort(students, new Comparator<Student>() {
+                public int compare(Student st1, Student st2) {
+                    return -st1.getName().compareTo(st2.getName());
+                }
+            }
+        );
+        //
         System.out.println("Sorted Arrays = " + Arrays.toString(students));
     }
 
