@@ -1,4 +1,4 @@
-package com.softserve.edu05;
+package com.softserve.edu5;
 
 public class CalcArrays {
     private int[] arrayOfNumbers;

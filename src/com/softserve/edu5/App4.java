@@ -1,5 +1,4 @@
-package com.softserve.edu05;
-import java.util.Scanner;
+package com.softserve.edu5;
 
 public class App4 {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.softserve.edu05;
+package com.softserve.edu5;
 
 public class FindNumbers {
     private int[] array;

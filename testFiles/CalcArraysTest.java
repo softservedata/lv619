@@ -1,9 +1,6 @@
 import org.junit.Assert;
 import org.junit.Test;
-import com.softserve.edu05.CalcArrays;
-
-import java.util.Arrays;
-import java.util.Scanner;
+import com.softserve.edu5.CalcArrays;
 
 public class CalcArraysTest {
     @Test

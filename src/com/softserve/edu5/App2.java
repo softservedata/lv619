@@ -1,4 +1,4 @@
-package com.softserve.edu05;
+package com.softserve.edu5;
 import java.util.Scanner;
 
 public class App2 {

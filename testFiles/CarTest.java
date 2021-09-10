@@ -1,7 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.softserve.edu05.Car;
+import com.softserve.edu5.Car;
 
 public class CarTest {
     @Test

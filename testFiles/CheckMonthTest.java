@@ -1,6 +1,5 @@
-import com.softserve.edu05.CheckMonth;
+import com.softserve.edu5.CheckMonth;
 import org.junit.Assert;
-import org.junit.Before;
 import org.junit.Test;
 
 public class CheckMonthTest {
