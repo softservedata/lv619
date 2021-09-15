@@ -1,4 +1,4 @@
-package com.sofserve.hw3;
+package com.softserve.hw3;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -60,9 +60,14 @@ public class App1 {
         int number = inputIntNumber();
 
         for(HTTPError httpError: HTTPError.values()){
-            if (number == httpError.NUMBER)
+            if (number == httpError.NUMBER) {
                 System.out.println(httpError.ERROR);
+            }
+            else {
+            	System.out.println("There is no such number in list");
+            }
         }
+            
     }
 
     public static float inputFloatNumber() throws IOException {

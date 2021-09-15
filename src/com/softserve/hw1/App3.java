@@ -1,4 +1,4 @@
-package com.sofserve.hw1;
+package com.softserve.hw1;
 
 public class App3 {
     public static void main (String[] args){
