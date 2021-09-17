@@ -15,7 +15,7 @@ public class App12 {
             rates[i] = Double.parseDouble(reader.readLine());
         }
         System.out.println("Final rate - " + findFinalRate(rates));
-
+        reader.close();
     }
     public static double findFinalRate(double [] rates) {
         double min = rates[0];

@@ -17,6 +17,7 @@ public class App10 {
             points[i] = Double.parseDouble(reader.readLine());
         }
         System.out.println("number of points in circle - " + countPointsInCircle(points, radius));
+        reader.close();
 
     }
     public static int countPointsInCircle(double[] points, double radius) {

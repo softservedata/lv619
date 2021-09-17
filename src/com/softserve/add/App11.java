@@ -18,6 +18,7 @@ public class App11 {
         System.out.println("Time in queue " + Arrays.toString(times));
         System.out.println("Times of all customers in queue " + Arrays.toString(findTimeInQueue(times)));
         System.out.println("Number of faster customer - " + findFasterCustomer(times));
+        reader.close();
 
     }
     public static double[] findTimeInQueue(double [] times) {
