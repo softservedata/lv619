@@ -15,6 +15,7 @@ public class App4 {
             numbers[i] = Double.parseDouble(reader.readLine());
         }
         System.out.println(Arrays.toString(createOrder(numbers)));
+        reader.close();
     }
     public static double[] createOrder(double[] numbers) {
         double sum = 0;
