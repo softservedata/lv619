@@ -1,9 +1,9 @@
-package com.softserve.hw4test;
+package com.softserve.hw5test;
 
 import org.junit.Assert;
 import org.junit.Test;
 
-import com.softserve.hw4.App1;
+import com.softserve.hw5.App1;
 
 public class App1Test {
 

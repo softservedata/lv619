@@ -1,6 +1,6 @@
-package com.softserve.hw4test;
+package com.softserve.hw5test;
 
-import com.softserve.hw4.Car;
+import com.softserve.hw5.Car;
 import org.junit.Assert;
 import org.junit.BeforeClass;
 import org.junit.Test;

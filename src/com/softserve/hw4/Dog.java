@@ -1,4 +1,4 @@
-package com.softserve.hw3;
+package com.softserve.hw4;
 
 public class Dog {
     public enum Breeds{
