@@ -1,14 +1,14 @@
-package com.softserve.hw6;
+package com.softserve.hw6.task1;
 
-public class Eagle extends FlyingBird{
+public class Penguin extends NonFlyingBird{
 
-    public Eagle(boolean layEggs, String feathers) {
+    public Penguin(boolean layEggs, String feathers) {
         super(layEggs, feathers);
     }
 
     @Override
     public String toString() {
-        return "Eagle{" +
+        return "Penguin{" +
                 "layEggs=" + layEggs +
                 ", feathers='" + feathers + '\'' +
                 '}';

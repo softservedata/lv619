@@ -1,4 +1,4 @@
-package com.softserve.pt6;
+package com.softserve.pt6.task1;
 
 public abstract class Car {
     String model;

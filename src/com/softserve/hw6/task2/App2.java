@@ -1,4 +1,4 @@
-package com.softserve.hw6;
+package com.softserve.hw6.task2;
 
 public class App2 {
     public static void main(String[] args) {

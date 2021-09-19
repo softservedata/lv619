@@ -1,4 +1,4 @@
-package com.softserve.pt6;
+package com.softserve.pt6.task2;
 
 public class ColorLine extends Line{
     String Color;

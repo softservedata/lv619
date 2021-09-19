@@ -1,4 +1,4 @@
-package com.softserve.hw6;
+package com.softserve.hw6.task1;
 
 public abstract class NonFlyingBird extends Bird{
     public NonFlyingBird(boolean layEggs, String feathers) {

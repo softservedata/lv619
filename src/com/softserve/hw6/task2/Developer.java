@@ -1,4 +1,4 @@
-package com.softserve.hw6;
+package com.softserve.hw6.task2;
 
 public class Developer extends Employee{
     private String position;

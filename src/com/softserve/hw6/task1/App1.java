@@ -1,4 +1,4 @@
-package com.softserve.hw6;
+package com.softserve.hw6.task1;
 
 public class App1 {
     static Bird[] birds = new Bird[4];

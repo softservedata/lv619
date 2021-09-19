@@ -1,4 +1,4 @@
-package com.softserve.pt6;
+package com.softserve.pt6.task2;
 
 public class App2 {
     static  Line[] lines = new Line[5];
