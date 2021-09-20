@@ -64,7 +64,6 @@ public class Person extends Main {
     public void changeName(String fn, String ln) {
         setFirstName(fn);
         setLastName(ln);
-        setBirthYear(by);
 
     }
 }
