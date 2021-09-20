@@ -1,8 +1,5 @@
-package com.softserve.HWork_03;
+package com.softserve.HWork03;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.Scanner;
 
 public class HW03 {

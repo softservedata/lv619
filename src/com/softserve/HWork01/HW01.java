@@ -1,9 +1,5 @@
-package com.softserve.HWork_01;
+package com.softserve.HWork01;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class HW01 {
