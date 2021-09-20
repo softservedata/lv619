@@ -1,4 +1,4 @@
-package com.softserve.HW04;
+package com.softserve.HWork04;
 
 
 public class Main {
