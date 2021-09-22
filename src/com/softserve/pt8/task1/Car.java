@@ -1,4 +1,4 @@
-package com.softserve.pt8;
+package com.softserve.pt8.task1;
 
 import java.time.LocalDate;
 
@@ -13,48 +13,49 @@ public class Car {
     private Car() {
     }
 
-    public static CarBuilder getCar() {
-
-        return new CarBuilder();
-    }
     public static class CarBuilder{
+        private Car car = new Car();
         public CarBuilder() {
         }
         public CarBuilder addModel(String model) {
-            CarBuilder carBuilder = new CarBuilder();
-
-            return carBuilder;
+            car.model = model;
+            return this;
         }
 
-        /*public CarBuilder addDateOfProduction(LocalDate dateOfProduction) {
-            CarBuilder carBuilder = new CarBuilder();
-            return carBuilder;
+        public CarBuilder addDateOfProduction(LocalDate dateOfProduction) {
+            car.dateOfProduction = dateOfProduction;
+            return this;
         }
 
         public CarBuilder addEngineCapacity(double engineCapacity) {
-            CarBuilder carBuilder = new CarBuilder();
-            carBuilder.engineCapacity = engineCapacity;
-            return carBuilder;
+            car.engineCapacity = engineCapacity;
+            return this;
         }
 
         public CarBuilder addColor(String color) {
-            CarBuilder carBuilder = new CarBuilder();
-            carBuilder.color = color;
-            return carBuilder;
+            car.color = color;
+            return this;
         }
 
         public CarBuilder addPassengerCapacity(int passengerCapacity) {
-            CarBuilder carBuilder = new CarBuilder();
-            carBuilder.passengerCapacity = passengerCapacity;
-            return carBuilder;
+            car.passengerCapacity = passengerCapacity;
+            return this;
         }
 
         public CarBuilder setIsAirConditioning(boolean isAirConditioning) {
-            CarBuilder carBuilder = new CarBuilder();
-            carBuilder.isAirConditioning = isAirConditioning;
-            return carBuilder;
+            car.isAirConditioning = isAirConditioning;
+            return this;
         }
-        */
+
+        public Car build() {
+            return car;
+        }
+
+    }
+
+    public static CarBuilder getCar() {
+
+        return new CarBuilder();
     }
 
     @Override
