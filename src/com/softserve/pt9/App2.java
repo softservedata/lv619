@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.Map;
 
 public class App2 {
@@ -20,24 +22,36 @@ public class App2 {
         System.out.println(employeeMap);
         System.out.println("Input ID");
         int key = Integer.parseInt(reader.readLine());
-        if (employeeMap.containsKey(key)) {
-            System.out.println("User name - " + employeeMap.get(key));
+        System.out.println(findUser(employeeMap, key));
+        System.out.println("Input name");
+        String name = reader.readLine();
+        for (String name1: findUserByName(employeeMap, name)) {
+            System.out.println(name1);
+        }
+
+    }
+    public static String findUser(Map<Integer, String> users,int key) {
+        String result;
+        if (users.containsKey(key)) {
+            result = "User name - " + users.get(key);
         }
         else {
-            System.out.println("There is no Users with this ID");
+            result = "There is no Users with this ID";
         }
-        System.out.println("Name");
-        String name = reader.readLine();
-        if (employeeMap.containsValue(name)) {
-            for (Map.Entry entry: employeeMap.entrySet()) {
+        return result;
+    }
+    public static List<String> findUserByName(Map<Integer, String> users, String name) {
+        List<String> list = new LinkedList<>();
+        if (users.containsValue(name)) {
+            for (Map.Entry entry: users.entrySet()) {
                 if (entry.getValue().equals(name)) {
-                    System.out.println("Users ID - " + entry.getKey());
+                    list.add("Users ID - " + entry.getKey());
                 }
             }
         }
         else {
-            System.out.println("There is no Users with this name");
+            list.add("There is no Users with this name");
         }
-
+        return list;
     }
 }
