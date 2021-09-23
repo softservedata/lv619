@@ -6,6 +6,16 @@ public class App1 {
     static List<Integer> myCollection = new LinkedList<>();
     static List<Integer> newCollection = new LinkedList<>();
     public static void main(String[] args) {
+        initialization();
+        System.out.println(myCollection);
+        newCollection = findMoreThanFive(myCollection);
+        System.out.println(newCollection);
+        newCollection = insertNumbers(newCollection);
+        for (Integer number : newCollection) {
+            System.out.printf("position – %d, value of element – %d%n", newCollection.indexOf(number), number);
+        }
+        System.out.println(sortList(newCollection));
+
 
     }
     static void initialization() {
@@ -16,8 +26,8 @@ public class App1 {
     public static List<Integer> findMoreThanFive(List<Integer> list) {
         List<Integer> newList = new LinkedList<>();
         for (Integer i: list) {
-            if(list.get(i) > 5) {
-                newList.add(list.get(i));
+            if(i > 5) {
+                newList.add(i);
             }
         }
         return newList;
@@ -28,7 +38,7 @@ public class App1 {
         while (iterator.hasNext()) {
             Integer number = iterator.next();
             if (number > 20) {
-                list.remove(number);
+                iterator.remove();
             }
         }
         return list;
