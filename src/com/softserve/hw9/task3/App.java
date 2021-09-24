@@ -8,6 +8,10 @@ public class App {
     public static void main(String[] args) {
         initialization();
         Student.printStudents(students, 2);
+        students = Student.sortByName(students);
+        System.out.println(students);
+        students = Student.sortByCourse(students);
+        System.out.println(students);
 
     }
     static void initialization() {

@@ -1,18 +1,31 @@
 package com.softserve.hw9.task3;
 
-import java.util.Comparator;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-public class Student implements Comparable<Student>{
+public class Student {
     private String name;
     private int course;
+
+    public static class NameComparator implements Comparator<Student> {
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o1.getName().compareTo(o2.getName());
+        }
+    }
+
+    public static class CourseComparator implements Comparator<Student> {
+
+        @Override
+        public int compare(Student o1, Student o2) {
+            return o2.getCourse() - o1.getCourse();
+        }
+    }
 
     public Student(String name, int course) {
         this.name = name;
         this.course = course;
     }
+
 
     public static void printStudents(List students, int course) {
         Iterator<Student> iterator = students.iterator();
@@ -24,22 +37,14 @@ public class Student implements Comparable<Student>{
         }
     }
 
-    public int compareByName(Student student1, Student student2) {
-        return new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return o1.getName().compareTo(o2.getName());
-            }
-        }.compare(student1, student2);
+    public static List sortByName(List<Student> students) {
+        students.sort(new NameComparator());
+        return students;
     }
 
-    public int compareByCourse(Student student1, Student student2) {
-        return new Comparator<Student>() {
-            @Override
-            public int compare(Student o1, Student o2) {
-                return o1.getCourse() - o2.getCourse();
-            }
-        }.compare(student1, student2);
+    public static List sortByCourse(List<Student> students) {
+        students.sort(new CourseComparator());
+        return students;
     }
 
     public String getName() {
@@ -79,8 +84,5 @@ public class Student implements Comparable<Student>{
         return Objects.hash(name, course);
     }
 
-    @Override
-    public int compareTo(Student o) {
-        return 0;
-    }
+
 }
