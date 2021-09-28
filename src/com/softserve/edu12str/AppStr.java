@@ -48,6 +48,13 @@ public class AppStr {
         str = new String();
         System.out.println("str.isEmpty() = " + str.isEmpty());
         */
+        //
+        String str = "ab  ra   ca da    bra   abba";
+        System.out.println("str =" + str);
+        //str = str.replace("  ", " ");
+        str = str.replaceAll(" +", " ");
+        System.out.println("str =" + str);
+        //
         /*-
         String a = "a"; // What will be the results?
         String A = "A";
@@ -58,7 +65,7 @@ public class AppStr {
         System.out.println("a.compareTo(A) = " + a.compareTo(A)); // 32
         System.out.println("a.compareToIgnoreCase(A) = " + a.compareToIgnoreCase(A)); // 0
         */
-        // /*-
+        /*-
         String a0 = "Java"; // equals new String("Java");
         String a1 = "Java"; // set reference
         String a2 = new String("Java"); // create new object
@@ -75,7 +82,7 @@ public class AppStr {
         System.out.println("a0.hashCode() =  " + a0.hashCode());
         System.out.println("a1.hashCode() =  " + a1.hashCode());
         System.out.println("a2.hashCode() =  " + a2.hashCode());
-        // */
+        */
         /*-
         final double PI = 3.1415926;
         String formatStr = "%S is =%6.2f\n";
@@ -93,6 +100,8 @@ public class AppStr {
         System.out.println("str = " + str);
         //
         StringBuilder sb = new StringBuilder(s1);
+        System.out.println("first sb.capacity() = " + sb.capacity());
+        //sb.ensureCapacity(100);
         sb.append(s2);
         // str = sb.toString();
         System.out.println(" sb = " + sb); // toString()
