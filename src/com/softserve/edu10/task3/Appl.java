@@ -9,7 +9,7 @@ public class Appl {
         String text = new String("");
         Scanner in = new Scanner(System.in);
         text = in.nextLine();
-        Pattern pattern = Pattern.compile("(\\u0024?\\d+\\u002E?\\d{2})");
+        Pattern pattern = Pattern.compile("(\\u0024\\d+\\u002E\\d{2})");
         Matcher matcher = pattern.matcher(text);
         while(matcher.find()) {
             System.out.println(text.substring(matcher.start(), matcher.end()));
