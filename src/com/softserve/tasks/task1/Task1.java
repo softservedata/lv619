@@ -1,10 +1,10 @@
-package com.softserve.task1;
+package com.softserve.tasks.task1;
 
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-public class Task1{
+public class Task1 {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input A");
