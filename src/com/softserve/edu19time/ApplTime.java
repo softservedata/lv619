@@ -1,19 +1,15 @@
 package com.softserve.edu19time;
 
-import java.time.Instant;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
-import java.time.ZoneId;
-import java.time.ZonedDateTime;
-import java.time.format.DateTimeFormatter;
-import java.util.Date;
+import java.util.Calendar;
+import java.util.GregorianCalendar;
 
 public class ApplTime {
 	public static void main(String[] args) {
-	    /*-
-	    Calendar cal = new GregorianCalendar(2021, 0, 31);
+	    // /*-
+	    Calendar cal = new GregorianCalendar(2021, 1, 21);
 	    System.out.println("GregorianCalendar cal = " + cal.getTime());
-	    */
+	    System.out.println("GregorianCalendar cal = " + cal.getActualMaximum(Calendar.DAY_OF_MONTH));
+	    // */
 		/*-
 		long currentTime = System.currentTimeMillis();
 		System.out.println("currentTime = " + currentTime);
@@ -120,7 +116,7 @@ public class ApplTime {
 		Duration duration = Duration.between(time2, time1);
 		System.out.println("duration = " + duration);
 		*/
-		// /*-
+		/*-
 		LocalDate ofEpochDay = LocalDate.ofEpochDay(0L);
 		System.out.println("ofEpochDay = " + ofEpochDay);
 		//
@@ -143,6 +139,6 @@ public class ApplTime {
 		//DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd.MM.yyyy 'at' hh:mm");
 		DateTimeFormatter formatter = DateTimeFormatter.ofPattern("HH:mm:ss.SSS dd.MM.yyyy");
 		System.out.println("localDate.format(formatter): " + localDate.format(formatter));
-		// */
+		*/
 	}
 }
