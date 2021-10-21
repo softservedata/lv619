@@ -38,6 +38,7 @@ public class ApplStream {
         // st = st.peek(x->System.out.println("++++"));
         arr[1] = "0000";
         st.forEach(System.out::println);
+        //st.forEach(System.out::println); // Runtime Error
         // */
         /*-
         Stream<String> st = strings.stream()
