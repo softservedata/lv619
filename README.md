@@ -6,6 +6,7 @@
 
 - main - template for new branches;
 - dev - examples from online lessons;
+- maven - template maven project for new branches;
 - Savka - new branch(Marko Savka);
 - Rostyslav - new branch with homeworks
 - PaulChup - Chupahin Pavlo
