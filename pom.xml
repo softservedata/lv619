@@ -13,6 +13,7 @@
 	<url>http://maven.apache.org</url>
 
 	<properties>
+		<application.password>My_Pass</application.password>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 	</properties>
 
@@ -92,6 +93,14 @@
 					<includes>
 						<include>**/*.java</include>
 					</includes>
+					<!-- <excludes> -->
+					<!-- <exclude>**/SeleniumTest.java</exclude> -->
+					<!-- </excludes> -->
+					<systemPropertyVariables>
+						<surefire.application.password>
+							${application.password}
+						</surefire.application.password>
+					</systemPropertyVariables>
 				</configuration>
 			</plugin>
 
