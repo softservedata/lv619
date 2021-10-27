@@ -1,4 +1,4 @@
-package com.softserve.edu01;
+package HW1;
 
 public class HT01 {
 
@@ -20,21 +20,19 @@ public class HT01 {
 		System.out.println("Умножение = " + result3);
 		System.out.println("Деление 1 = " + result4); // false
 		System.out.println("Как дела?");
-		
+
 		double c = a;
 		double d = b;
-		
+
 		double result5 = c / d;
-		
+
 		System.out.println("Деление 2 = " + result5);
 
-		String s = "answer";
+		System.out.println("How are you?");
 
-		System.out.println("s = " + s);
+		String answer = "fine.";
 
-	}
-
-	public static void main1(String[] args) {
+		System.out.println("I am " + answer);
 
 	}
 
