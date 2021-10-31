@@ -1,6 +1,5 @@
 package com.softserve.pt4;
 
-import java.util.Locale;
 
 public class Country {
     enum Continents{ EUROPE, ASIA, NORTH_AMERICA, SOUTH_AMERICA, AFRICA, AUSTRALIA, MIDDLE_OF_NOWHERE
@@ -28,7 +27,7 @@ public class Country {
                 this.continent = Continents.ASIA;
                 break;
             case "australia": case "new zeeland": case "fiji":
-                this.continent = Continents.ASIA;
+                this.continent = Continents.AUSTRALIA;
                 break;
             default: continent = Continents.MIDDLE_OF_NOWHERE;
         }
