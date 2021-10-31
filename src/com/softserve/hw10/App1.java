@@ -5,17 +5,23 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class App1 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input sentence");
-        String sentence = reader.readLine();
+        String sentence = null;
+        try {
+            sentence = reader.readLine();
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("longest word in the sentence");
         System.out.println(findLongestWord(sentence));
         System.out.println("The number of its letters");
         System.out.println(determineNumbersOfLatters(findLongestWord(sentence)));
         System.out.println("Second word in reverse order");
         System.out.println(reverseSecondWord(sentence));
-        reader.close();
+
 
     }
     public static String findLongestWord(String sentence) {

@@ -5,17 +5,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class App12 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input n");
-        int n = Integer.parseInt(reader.readLine());
-        double [] rates = new double[n];
-        for (int i = 0; i < n; i++) {
-            System.out.printf("Input %d rate %n", i + 1);
-            rates[i] = Double.parseDouble(reader.readLine());
+        try {
+            int n = Integer.parseInt(reader.readLine());
+            double[] rates = new double[n];
+            for (int i = 0; i < n; i++) {
+                System.out.printf("Input %d rate %n", i + 1);
+                rates[i] = Double.parseDouble(reader.readLine());
+            }
+            System.out.println("Final rate - " + findFinalRate(rates));
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("Final rate - " + findFinalRate(rates));
-        reader.close();
+
     }
     public static double findFinalRate(double [] rates) {
         double min = rates[0];

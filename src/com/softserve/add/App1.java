@@ -6,10 +6,14 @@ import java.io.InputStreamReader;
 
 public class App1 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input Year");
-        System.out.println("Century " + countCentury(Integer.parseInt(reader.readLine())));
+        try {
+            System.out.println("Century " + countCentury(Integer.parseInt(reader.readLine())));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     public static int countCentury(int year) {

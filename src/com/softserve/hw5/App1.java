@@ -10,23 +10,35 @@ public class App1 {
     static int [] numbersTask2 = new int[10];
     static int [] numbersTask3 = new int[5];
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         //Task 1
         System.out.println("Input number of Mounth");
-        System.out.println("Number of days in this Mounth will be "
-                + task1(Integer.parseInt(reader.readLine())) );
+        try {
+            System.out.println("Number of days in this Mounth will be "
+                    + task1(Integer.parseInt(reader.readLine())) );
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         //Task 2
         for (int i = 0; i < numbersTask2.length; i++) {
             System.out.format("Enter %d number%n", i + 1);
-            numbersTask2[i] = Integer.parseInt(reader.readLine());
+            try {
+                numbersTask2[i] = Integer.parseInt(reader.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
         System.out.println(Arrays.toString(numbersTask2));
         System.out.println(task2(numbersTask2));
         //Task 3;
         for (int i = 0; i < numbersTask3.length; i++) {
             System.out.format("Enter %d number%n", i + 1);
-            numbersTask3[i] = Integer.parseInt(reader.readLine());
+            try {
+                numbersTask3[i] = Integer.parseInt(reader.readLine());
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
             if (numbersTask3[i] < 0) {
                 break;
             }

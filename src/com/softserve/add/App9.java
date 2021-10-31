@@ -5,11 +5,16 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class App9 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input n");
-        System.out.println("Value = " + findValue(Integer.parseInt(reader.readLine())));
-        reader.close();
+        try {
+            System.out.println("Value = " + findValue(Integer.parseInt(reader.readLine())));
+            reader.close();
+        } catch (IOException e) {
+            System.out.println("Wrong Input");
+        }
+
     }
     public static double findValue(int n) {
         double value = Math.cos(n);

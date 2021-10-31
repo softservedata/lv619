@@ -6,19 +6,23 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 
 public class App11 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input n");
-        int n = Integer.parseInt(reader.readLine());
-        double [] times = new double[n];
-        for (int i = 0; i < n; i++) {
-            System.out.printf("Input time of %d customer %n", i + 1);
-            times[i] = Double.parseDouble(reader.readLine());
+        try {
+            int n = Integer.parseInt(reader.readLine());
+            double[] times = new double[n];
+            for (int i = 0; i < n; i++) {
+                System.out.printf("Input time of %d customer %n", i + 1);
+                times[i] = Double.parseDouble(reader.readLine());
+            }
+            reader.close();
+            System.out.println("Time in queue " + Arrays.toString(times));
+            System.out.println("Times of all customers in queue " + Arrays.toString(findTimeInQueue(times)));
+            System.out.println("Number of faster customer - " + findFasterCustomer(times));
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        System.out.println("Time in queue " + Arrays.toString(times));
-        System.out.println("Times of all customers in queue " + Arrays.toString(findTimeInQueue(times)));
-        System.out.println("Number of faster customer - " + findFasterCustomer(times));
-        reader.close();
 
     }
     public static double[] findTimeInQueue(double [] times) {

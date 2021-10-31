@@ -7,11 +7,16 @@ import java.util.Arrays;
 
 public class App2 {
     static Car [] cars = new Car[4];
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         initialization();
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input Year");
-        int year = Integer.parseInt(reader.readLine());
+        int year = 0;
+        try {
+            year = Integer.parseInt(reader.readLine());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.out.println("Cars year production " + year);
         System.out.println(Arrays.toString(Car.getCarsByYear(year, cars)));
         System.out.println("Cars sorted my year");

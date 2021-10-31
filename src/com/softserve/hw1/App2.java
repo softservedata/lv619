@@ -6,13 +6,17 @@ import java.io.InputStreamReader;
 
 public class App2 {
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         System.out.println("What is Your name?");
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String name = reader.readLine();
-        System.out.println("Where are you live, " + name + "?");
-        String address = reader.readLine();
-        System.out.println(name + "," + address);
-        reader.close();
+        try {
+            String name = reader.readLine();
+            System.out.println("Where are you live, " + name + "?");
+            String address = reader.readLine();
+            System.out.println(name + "," + address);
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -9,14 +9,19 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App3 {
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String sentence = reader.readLine();
+        String sentence = null;
+        try {
+            sentence = reader.readLine();
+            reader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         List<String> dollars = findPattern(sentence);
         for (String dollar: dollars) {
             System.out.println(dollar);
         }
-        reader.close();
     }
     public static List<String> findPattern(String sentence){
         List<String> patterns = new ArrayList<>();

@@ -7,15 +7,23 @@ import java.util.Arrays;
 
 public class App4 {
     static double[] numbers;
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args)  {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input n");
-        for (int i = 0; i < Integer.parseInt(reader.readLine()); i++) {
-            System.out.printf("Input %d number %n", i + 1);
-            numbers[i] = Double.parseDouble(reader.readLine());
+        try {
+            for (int i = 0; i < Integer.parseInt(reader.readLine()); i++) {
+                System.out.printf("Input %d number %n", i + 1);
+                numbers[i] = Double.parseDouble(reader.readLine());
+            }
+            reader.close();
         }
+        catch (IOException e) {
+            e.printStackTrace();
+            System.out.println("Wrong input");
+            }
+
         System.out.println(Arrays.toString(createOrder(numbers)));
-        reader.close();
+
     }
     public static double[] createOrder(double[] numbers) {
         double sum = 0;

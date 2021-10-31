@@ -22,14 +22,19 @@ public class Person {
         return 2021 - this.birthYear;
     }
 
-    public void input() throws IOException {
+    public void input() {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
         System.out.println("Input First Name");
-        setFirstName(reader.readLine());
-        System.out.println("Input Last Name");
-        setLastName(reader.readLine());
-        System.out.println("Input Birth Year");
-        setBirthYear(Integer.parseInt(reader.readLine()));
+        try {
+            setFirstName(reader.readLine());
+            System.out.println("Input Last Name");
+            setLastName(reader.readLine());
+            System.out.println("Input Birth Year");
+            setBirthYear(Integer.parseInt(reader.readLine()));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
     public void output() {
