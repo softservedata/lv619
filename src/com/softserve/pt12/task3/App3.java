@@ -12,7 +12,7 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class App3 {
-    public static String fileName = "D:\\lv619\\src\\com\\softserve\\pt12\\task3\\mytext.txt";
+    public static String fileName = ".\\src\\com\\softserve\\pt12\\task3\\mytext.txt";
     public static String[] lines;
     public static void main(String[] args) {
         List<String> fileLines = new LinkedList<>();
