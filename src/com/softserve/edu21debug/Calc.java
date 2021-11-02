@@ -32,4 +32,9 @@ public class Calc {
 		}
 		return count;
 	}
+	
+	public static void print() {
+	    System.out.println("Static method print() done");
+	}
+
 }
