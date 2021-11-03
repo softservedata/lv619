@@ -1,0 +1,29 @@
+Name: Rostyslav Rostylkin
+
+Residence:  Kyiv
+Date of birth: 10/11/1999
+
+
+Hobby: Java Development
+IDE:
+•	Eclipse
+•	IntelliJ IDEA
+Syntax:
+•	Java 8
+•	Code Conventions
+Java SE:
+•	Generics
+•	Collections framework
+•	Handling Exceptions
+•	Annotations
+•	Multithreading / Concurrency
+•	Strings
+•	Regular expression
+•	I/O Streams
+Automated testing:
+•	JUnit
+OOP paradigms:
+•	Abstraction
+•	Encapsulation
+•	Inheritance
+•	Polymorphism
