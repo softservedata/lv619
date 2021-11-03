@@ -1,0 +1,4 @@
+Number of lines = 29
+The longest line is number 18
+Name: Rostyslav Rostylkin
+Date of birth: 10/11/1999
