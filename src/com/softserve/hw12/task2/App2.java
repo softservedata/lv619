@@ -8,6 +8,11 @@ public class App2 {
         Thread thread2 = new Thread(new Thread2());
         thread1.start();
         thread2.start();
+        try {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
         synchronized (monitor) {
             i = 5;
             monitor.notifyAll();
