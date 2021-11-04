@@ -1,4 +1,4 @@
-package hw008OOP2.prTask2;
+package hw08OOP2.prTask2;
 
 public class Teacher extends Staff {
 	

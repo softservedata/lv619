@@ -1,4 +1,4 @@
-package hw008OOP2.hw01;
+package hw08OOP2.hw01;
 
 public abstract class Employee implements Payment{
 	

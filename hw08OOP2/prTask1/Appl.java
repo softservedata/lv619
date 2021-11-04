@@ -1,4 +1,4 @@
-package hw008OOP2.prTask1;
+package hw08OOP2.prTask1;
 
 public class Appl {
 	
