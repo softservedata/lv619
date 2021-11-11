@@ -2,6 +2,8 @@ package com.softserve.edu;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Arrays;
+import java.util.Map;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,11 +14,12 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Home
  */
-@WebServlet({"/Home", "/home", "/"})
+//@WebServlet({ "/Home", "/home", "/" })
+@WebServlet({ "/Home", "/home"})
 public class Home extends HttpServlet {
-	private static final long serialVersionUID = 1L;
-	private String box = "";  // Invalid Solution
-       
+    private static final long serialVersionUID = 1L;
+    private String box = ""; // Invalid Solution
+
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -25,17 +28,26 @@ public class Home extends HttpServlet {
         // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		//response.getWriter().append("Served at: ").append(request.getContextPath());
-	    if ((request.getParameter("box") != null)
-                && (!request.getParameter("box").isEmpty())) {
+    /**
+     * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        //response.getWriter().append("Served at: ").append(request.getContextPath());
+        if ((request.getParameter("box") != null) && (!request.getParameter("box").isEmpty())) {
             box = request.getParameter("box");
+            if (box.equals("error")) {
+                throw new RuntimeException("hahaha");
+            }
         }
-	    response.setContentType("text/html; charset=UTF-8");
+        Map<String, String[]> requestParams = request.getParameterMap();
+        for (Map.Entry<String, String[]> param : requestParams.entrySet()) {
+            System.out.println(param.getKey() + " => " + Arrays.toString(param.getValue()));
+        }
+        response.setContentType("text/html; charset=UTF-8");
+        //response.setContentType("application/zip; charset=UTF-8");
         PrintWriter out = response.getWriter();
         out.println("<html>");
         out.println("<body>");
@@ -48,14 +60,16 @@ public class Home extends HttpServlet {
         out.println("</body>");
         out.println("</html>");
         out.close();
-	}
+    }
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
-	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
-	}
+    /**
+     * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse
+     *      response)
+     */
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        // TODO Auto-generated method stub
+        doGet(request, response);
+    }
 
 }
