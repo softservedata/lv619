@@ -38,19 +38,19 @@ hs_err_pid*
 
 # Single Module Project
 /.externalToolBuilders/
-/.settings/
+#/.settings/
 /.metadata/
 /.recommenders/
 /.allure/
 /target/
 /bin/
-/build/
+#/build/
 /doc/
 /lib/
 /test-output/
 /allure-results/
-/.classpath
-/.project
+#/.classpath
+#/.project
 /.checkstyle
 /reports/
 /.idea/
@@ -64,18 +64,18 @@ workspace.xml
 
 # Multi Modules Project
 /**/.externalToolBuilders/
-/**/.settings/
+#/**/.settings/
 /**/.allure/
 /**/target/
 /**/doc/
 /**/bin/
-/**/build/
+#/**/build/
 /**/lib/
 /**/test-output/
 /**/allure-results/
 /**/report/
-/**/.classpath
-/**/.project
+#/**/.classpath
+#/**/.project
 /**/.checkstyle
 /**/reports
 /**/af.reporting
