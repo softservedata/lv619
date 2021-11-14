@@ -1,0 +1,23 @@
+package _07_oop_2.hw;
+
+final class ContractEmployee extends Employee {
+	////////////////////////////////////////////////////////////////////////////
+	private String federalTaxIdNumber;
+	private int fixedMonthlyPayment;
+	////////////////////////////////////////////////////////////////////////////
+	protected ContractEmployee(String employeeId, String name,
+			String federalTaxIdNumber, int fixedMonthlyPayment)
+	{
+		super(employeeId, name);
+		this.federalTaxIdNumber = federalTaxIdNumber;
+		this.fixedMonthlyPayment = fixedMonthlyPayment;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	double getFixedMonthlyPayment() {return fixedMonthlyPayment;}
+	////////////////////////////////////////////////////////////////////////////
+	@Override
+	public double calculatePay() {
+		return getFixedMonthlyPayment();
+	}
+	////////////////////////////////////////////////////////////////////////////
+}

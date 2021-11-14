@@ -1,0 +1,26 @@
+package _07_oop_2.hw;
+
+final class SalariedEmployee extends Employee {
+	////////////////////////////////////////////////////////////////////////////
+	private String socialSecurityNumber;
+	private double rate;
+	private int hours;
+	////////////////////////////////////////////////////////////////////////////
+	SalariedEmployee(String employeeId, String name,
+			String socialSecurityNumber, double rate, int hours)
+	{
+		super(employeeId, name);
+		this.socialSecurityNumber = socialSecurityNumber;
+		this.rate = rate;
+		this.hours = hours;
+	}
+	////////////////////////////////////////////////////////////////////////////
+	double getRate() {return rate;}
+	int getHours() {return hours;}
+	////////////////////////////////////////////////////////////////////////////
+	@Override
+	public double calculatePay() {
+		return getRate() * getHours();
+	}
+	////////////////////////////////////////////////////////////////////////////
+}
