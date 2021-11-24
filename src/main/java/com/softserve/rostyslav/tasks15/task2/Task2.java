@@ -13,10 +13,13 @@ public class Task2 {
         String result = "";
         for (int i = 2; i <= number; i++) {
             while (number % i == 0) {
-                result += i +"^";
+                result += i;
                 number = number/i;
+                if (number % i == 0) {
+                    result += "^";
+                }
+                else result+= ",";
             }
-            result = result.replace("\\^\b", ",");
         }
         result = result.substring(0, result.length() - 1);
         wtiteToConcole(result);
