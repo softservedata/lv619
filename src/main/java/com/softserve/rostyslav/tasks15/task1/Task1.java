@@ -1,5 +1,6 @@
 package com.softserve.rostyslav.tasks15.task1;
 
+
 import java.io.*;
 
 public class Task1 {
@@ -41,5 +42,7 @@ public class Task1 {
     public static void writeToFile(String result) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName2));
         writer.write(result);
+        //writer.flush();
+        writer.close();
     }
 }
