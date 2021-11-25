@@ -1,0 +1,1 @@
+Input text and calculate number of words in this text
