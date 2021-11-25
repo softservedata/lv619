@@ -37,7 +37,6 @@ public class Task3 {
     public static void writeToFile(String result) throws IOException {
         BufferedWriter writer = new BufferedWriter(new FileWriter(fileName2));
         writer.write(result);
-        //writer.flush();
         writer.close();
     }
 }
