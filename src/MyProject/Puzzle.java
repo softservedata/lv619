@@ -24,6 +24,18 @@ public class Puzzle extends JFrame {
 	                invariants[i*3 + j] = 0;
 	            }
 	        }
+	        
+	        for (int i = 1; i < 9; i++) {
+	            int k;
+	            int l;
+	            do {
+	                k = generate.nextInt(100) % 3;
+	                l = generate.nextInt(100) % 3;
+	            }
+	            while (nums[k][l] != 0);
+	            nums[k][l] = i;
+	            invariants[k*3+l] = i;
+	        }
 		
 	}
 
