@@ -34,14 +34,14 @@ public class Appl {
 	
 	static void printCars() throws SQLException{
 		try(ResultSet rs = st.executeQuery("SELECT * FROM Cars")){
-			 int n = rs.getMetaData().getColumnCount();
-				for(int i = 1; i <= n; ++i)
-					System.out.print(rs.getMetaData().getColumnName(i) + "\t");
+			int n = rs.getMetaData().getColumnCount();
+			for(int i = 1; i <= n; ++i)
+				System.out.print(rs.getMetaData().getColumnName(i) + "\t");
+			System.out.println();
+			while(rs.next()) {
+				for (int i = 1; i <= n; i++)
+					System.out.print(rs.getString(i) + '\t');
 				System.out.println();
-				while(rs.next()) {
-					for (int i = 1; i <= n; i++)
-						System.out.print(rs.getString(i) + '\t');
-					System.out.println();
 				}
 		 }
 	}
