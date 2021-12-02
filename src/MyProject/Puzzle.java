@@ -68,7 +68,7 @@ public class Puzzle extends JFrame {
 			}
 		}
 
-		if (counter % 2 != 0) { // 111111111111111111111111111111111
+		if (counter % 2 != 0) {
 			int temp = nums[0][0];
 			nums[0][0] = nums[2][2];
 			nums[2][2] = temp;
