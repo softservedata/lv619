@@ -1,7 +1,5 @@
 package HW4;
 
-import javax.swing.text.ChangedCharSetException;
-
 public class Employee {
 
 	private String name;
@@ -65,12 +63,27 @@ public class Employee {
 	}
 
 	public void changeRate(double rate) {
-		return getSalary() + getBonuses();
+		totalSum = getSalary() + getBonuses();
 
 	}
 
 	public double getBonuses() {
 		return getSalary() * 0.1;
+	}
+
+	public static void main(String[] args) {
+		Employee em1 = new Employee("Yevhen", 300, 165);
+		Employee em2 = new Employee("Dmitriy", 500, 180);
+		Employee em3 = new Employee("Maria", 400, 170);
+		System.out.println(em1);
+		System.out.println(em2);
+		System.out.println(em3);
+		em1.changeRate(totalSum);
+		System.out.println("Yevhen = " + totalSum);
+		em2.changeRate(totalSum);
+		System.out.println("Dmitriy = " + totalSum);
+		em3.changeRate(totalSum);
+		System.out.println("Maria = " + totalSum);
 	}
 
 }
