@@ -17,7 +17,7 @@ public class Appl {
 	//	Complete next tasks:
 	//	   1) count and write the number of symbols in every line.
 	//	   2) find the longest and the shortest line. 
-	//	   3) find and write only that lines, which consist of word «var»	
+	//	   3) find and write only that lines, which consist of word ï¿½varï¿½	
 	////////////////////////////////////////////////////////////////////////////
 	static {
 		try (FileWriter fWriter = new FileWriter("mytext.txt")) {
@@ -30,6 +30,7 @@ public class Appl {
 		System.out.println("\t\t\t\t\ta lot of text:\n" + buffer.toString());
 		fWriter.write(buffer.toString());
 		} catch (IOException e) {}
+		finally {System.out.println();}
 	}
 	//++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 	private static String getRandPunctuation() {

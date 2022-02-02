@@ -11,7 +11,7 @@ public class Appl {
 	////////////////////////////////////////////////////////////////////////////
 	private static final Scanner in = new Scanner(System.in);
 	////////////////////////////////////////////////////////////////////////////
-	private static int getRectangleArea(int a, int b) throws IllegalArgumentException{
+	private static int getRectangleArea(int a, int b){
 		if(a < 0 || b < 0)
 			throw new IllegalArgumentException("negative side length");
 		return a * b;
