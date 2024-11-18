@@ -3,7 +3,7 @@ package com.softserve.refresh;
 public class DigitSumCalculator {
     public static int calculateDigitSum(int number) {
         if (number >= 100 && number <= 999) {
-            //TODO
+
             int d1 = number / 100;
             number = number - d1 * 100;
             int d2 = number / 10;

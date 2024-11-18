@@ -22,12 +22,12 @@ public class BankAccount{
     }
 
     public void deposit(double deposit) {//add paremeter in method
-        //TODO
+
         balance += deposit;
     }
 
     public void withdraw(double withdraw) {//add paremeter in method
-        //TODO
+
         if (balance >= withdraw) {
             balance -= withdraw;
         }
